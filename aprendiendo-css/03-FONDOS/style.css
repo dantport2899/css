@@ -1,0 +1,25 @@
+body{
+    background-color: blueviolet;
+    background-image: url(src/fondo1.jpg);
+    color: white;
+    background-attachment: fixed;
+    text-align: justify;
+}
+
+#caja{
+    border: 5px solid black;
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    font-family: "Open Sans";
+    text-align: center;
+    line-height: 50px;
+    text-transform: uppercase;
+    
+
+}
+
+h2{
+    color: white;
+    padding: 15px;
+}
