@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scaleble=no">
     <title>Aprendiendo Bootstrap con Dante Portales</title>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -23,20 +23,31 @@
             <header id="header" class="col-12 bg-primary text-white p-4 pl-5">
                 <h1>Aprendeindo Bootstrap con Dante Portales</h1>
             </header>
-            <nav id="menu" class="col-12 bg-secondary text-white">
+            <nav id="menu" class="col-12 bg-secondary text-white d-sm-none d-md-block">
                 <ul class="row w-50">
-                    <li class="col">Inicio</a></li>
-                    <li class="col">Pagina 1</a></li>
-                    <li class="col">Pagina 2</a></li>
-                    <li class="col">Pagina 3</a></li>
-                    <li class="col">Contactos</a></li>
+                    <li class="col-xs-12 col-sm-12 col-md">Inicio</a></li>
+                    <li class="col-xs-12 col-sm-12 col-md">Pagina 1</a></li>
+                    <li class="col-xs-12 col-sm-12 col-md">Pagina 2</a></li>
+                    <li class="col-xs-12 col-sm-12 col-md">Pagina 3</a></li>
+                    <li class="col-xs-12 col-sm-12 col-md">Contactos</a></li>
                 </ul>
             </nav>
             <section id="content" class="row">
-                <section id="products" class="col-9 border">
-                    <h2>Productos</h2>
+                <section id="products" class="border col-xs-12 col-sm-12 col-md-9 ">
+                    <h2 class="pt-3">Productos</h2>
                     <hr>
                     <div class="items row">
+                        <div class="row">
+                            <div class="item col col-sm-12 col-md-4 bg-primary text-white">
+                                Producto
+                            </div>
+                            <div class="item col col-sm-6 col-md-4 bg-warning text-white ">
+                                Producto
+                            </div>
+                            <div class="item col col-sm-6 col-md-4 bg-danger text-white ">
+                                Producto
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="item col bg-primary text-white m-3">
                                 Producto
@@ -92,7 +103,7 @@
                         </div>
                     </div>
                 </section>
-                <aside id="aside" class="col-3 border">
+                <aside id="aside" class="col-3 border d-none d-sm-none d-md-block">
                     <h2>Barra lateral</h2>
 
                     <div class="lateral row bg-light align-items-center">
