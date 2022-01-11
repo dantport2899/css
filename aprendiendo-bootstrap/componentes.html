@@ -167,22 +167,75 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">¿Estas seguiro de querer abrir esta
+                                    ventana?</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                ...
+                                Una vez cerrada la podras abrir muchas mas veces.
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Fin Modal -->
+                <!--Collapse-->
+                <a class="btn btn-success" data-bs-toggle="collapse" href="#informacion" role="button">
+                    Mostar Informacion
+                </a>
+                <div class="collapse mt-3 " id="informacion">
+                    <div class="card card-body bg-dark text-white">
+                        Esta es la informacion oculta
+                    </div>
+                </div>
+                <!--FinCollapse-->
+
+                <!--Barra de progreso-->
+                <div class="progress m-4">
+                    <div id="barra-progreso" class="progress-bar bg-danger" role="progressbar">
+                        0%
+                    </div>
+                </div>
+
+                <script>
+                    var contador = 0;
+                    setInterval(function () {
+                        if (contador < 100) {
+                            var barra = document.querySelector("#barra-progreso");
+                            barra.style.width = contador + '%';
+                            barra.innerHTML = contador + '%'
+                            contador++;
+                        }
+                    }, 1000);
+                </script>
+                <!--Fin Barra de progreso-->
+
+                <!--Tooltip-->
+                <button type="button" class="btn-tool btn btn-danger mt-3" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Si das click sacaras una alerta">
+                    Alerta
+                </button>
+                <button type="button" class="btn-tool btn btn-warning mt-3" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Si das click sacaras una alerta">
+                    Alerta
+                </button>
+                <button type="button" class="btn-tool btn btn-success mt-3" data-bs-toggle="tooltip" data-bs-placement="right"
+                    title="Si das click sacaras una alerta">
+                    Alerta
+                </button>
+                <button type="button" class="btn-pop btn btn-info mt-3" data-bs-toggle="popover" data-bs-placement="left"
+                    title="Si das click sacaras una alerta">
+                    Alerta
+                </button>                  
+              
+                <!--Fin Tooltip-->
             </div>
+
+
 
         </div>
 
@@ -217,17 +270,55 @@
                     <a href="#" class="btn btn-primary">Entrar</a>
                 </div>
             </div>
+
+            <div class="clearfix"></div>
+
         </div>
+
+        <div class="row">
+            <nav aria-label="pagination" class="m-4">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a href="#" class="page-link">&laquo;</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a href="#" class="page-link">&raquo;</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </div>
     <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="jquery/popper.min.js"></script>
     <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
     <script>
         $(document).ready(function () {
             $(".carousel").carousel({
                 interval: 2000
-            })
+            });
+
+            $(".btn-tool").tooltip();
+
+            $(".btn-pop").popover();
         });
+
+
+
+
     </script>
 </body>
 
