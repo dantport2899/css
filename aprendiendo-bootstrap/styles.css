@@ -29,3 +29,12 @@ footer{
         height: auto;
     }
 }
+
+#carouselExampleIndicators{
+    max-height: 450px;
+    overflow: hidden;
+}
+
+#carouselExampleIndicators img{
+    height: 450px;
+}
